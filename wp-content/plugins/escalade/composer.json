@@ -1,0 +1,17 @@
+{
+    "name": "pmtrung/escalade",
+    "description": "Resort booking",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Phan Minh Trung",
+            "email": "trungminhphan@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": { "Controllers\\" : "./controllers", "Models\\" : "./models", "Views\\": "./views" }
+    }
+}

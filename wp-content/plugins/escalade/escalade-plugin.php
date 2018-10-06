@@ -36,6 +36,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 defined( 'ABSPATH' ) or die( 'Hey, you can\t access this file, you silly human!' );
 
+if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+    require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+}
+
 class EscaladePlugin
 {
     function __construct() {
@@ -57,7 +61,7 @@ class EscaladePlugin
     }
 
     function custom_post_type() {
-        register_post_type( 'accommodation_category', array( 'public' => true, 'label' => 'Accommodation Category' ) );
+        register_post_type( 'acc_cat', array( 'public' => true, 'label' => 'ACC Category' ) );
     }
 }
 
