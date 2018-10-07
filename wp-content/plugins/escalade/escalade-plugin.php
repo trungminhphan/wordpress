@@ -40,39 +40,26 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
     require_once dirname( __FILE__ ) . '/vendor/autoload.php';
 }
 
-class EscaladePlugin
-{
-    function __construct() {
-        add_action( 'init', array( $this, 'custom_post_type' ) );
-    }
-
-    function activate() {
-        // generated a CPT
-        // flush rewrite rules
-    }
-
-    function deactivate() {
-        // flush rewrite rules
-    }
-
-    function uninstall() {
-        // delete CPT
-        // delete all the plugin data from the DB
-    }
-
-    function custom_post_type() {
-        register_post_type( 'acc_cat', array( 'public' => true, 'label' => 'ACC Category' ) );
-    }
+/**
+ * The code that runs during plugin activation
+ */
+function activate_escalade_plugin() {
+    Models\Activate::activate();
 }
+register_activation_hook( __FILE__, 'activate_escalade_plugin' );
 
-if ( class_exists( 'EscaladePlugin' ) ) {
-    $escaladePlugin = new EscaladePlugin();
+/**
+ * The code that runs during plugin deactivation
+ */
+function deactivate_escalade_plugin() {
+    Models\Deactivate::deactivate();
 }
+register_deactivation_hook( __FILE__, 'deactivate_escalade_plugin' );
 
-// activation
-register_activation_hook( __FILE__, array( $escaladePlugin, 'activate' ) );
 
-// deactivation
-register_deactivation_hook( __FILE__, array( $escaladePlugin, 'deactivate' ) );
-
-// uninstall
+/**
+ * Initialize all the core classes of the plugin
+ */
+if ( class_exists( 'Controllers\\InitController' ) ) {
+    Controllers\InitController::registerServices();
+}
