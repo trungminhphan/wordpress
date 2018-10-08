@@ -102,8 +102,6 @@ class Controller {
 			admin_url('edit-tags.php?taxonomy=extra_service_category')
 		);*/
 	}
-	
-
 	function change_link() {
 	    global $submenu;
 	    $submenu['escalade'][1][2] = 'edit-tags.php?taxonomy=location_category';
