@@ -1,0 +1,43 @@
+.elementor-425 .elementor-element.elementor-element-f8fa552.elementor-widget-heading .elementor-heading-title{color:#000000;}.elementor-425 .elementor-element.elementor-element-f8fa552 .elementor-heading-title{font-family:"Sanfrancisco", sanfrancisco;font-size:56px;font-weight:300;text-transform:uppercase;}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: normal;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: normal;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Bold-1.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: 900;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Heavy.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: 300;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: 600;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Semibold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: 100;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Thin.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Sanfrancisco';
+	font-style: normal;
+	font-weight: 500;
+	src: url('http://wp.com/wp-content/uploads/2018/10/SanFranciscoText-Medium.ttf') format('woff2');
+}
+/* End Custom Fonts CSS */

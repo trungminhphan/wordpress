@@ -8,7 +8,7 @@ class ExtraServiceController {
 		add_filter( 'manage_extra_service_posts_columns', array($this,'smashing_extra_service_columns' ));
 		add_action( 'manage_extra_service_posts_custom_column', array($this,'smashing_extra_service_column'), 10, 2);
 	}
-
+	
 	function register_post_type() {
 		$labels = array(
 			'name'               => __( 'Extra services'),
@@ -41,7 +41,7 @@ class ExtraServiceController {
 			'hierarchical'       => false,
 			'menu_position'      => null,
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'price'),
-			'show_in_menu'       => true,
+			'show_in_menu'       => false,
 		);
 		register_post_type('extra_service', $args);
 	}

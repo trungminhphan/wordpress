@@ -4,12 +4,14 @@ use Controllers\CategoryController;
 class ExtraServiceCategoryController extends CategoryController{
 	function register(){
 		add_action('init', array($this, 'add_custom_taxonomies'), 0 );
-		add_action('extra_service_category_add_form_fields',array($this, 'add_category_image'), 10, 2 );
+		/*add_action('extra_service_category_add_form_fields',array($this, 'add_category_image'), 10, 2 );
 		add_action('created_extra_service_category', array ( $this, 'save_category_image' ), 10, 2 );
 		add_action('extra_service_category_edit_form_fields', array ( $this, 'update_category_image' ), 10, 2 );
 		add_action('extra_service_category_service', array ( $this, 'updated_category_image' ), 10, 2 );
-		add_action('admin_enqueue_scripts', array( $this, 'load_media' ) );
-		add_action('admin_footer',array($this, 'add_script'));
+		add_action('admin_enqueue_scripts', array( $this, 'load_media'));
+		add_action('admin_footer', array($this, 'add_script'));*/
+		add_filter( 'manage_extra_service_posts_columns', array($this,'smashing_extra_service_columns' ));
+		//add_action( 'manage_extra_service_posts_custom_column', array($this,'smashing_extra_service_column'), 10, 2);
 	}
 
 	function add_custom_taxonomies() {
@@ -29,11 +31,11 @@ class ExtraServiceCategoryController extends CategoryController{
 		      'menu_name' => __( 'EX Category' ),
 		    ),
 	    	'rewrite' => array(
-		    	'slug' => 'escalade-extra-service-category',
+		    	'slug' => 'category',
 		    	'with_front' => false,
 		    	'hierarchical' => true 
 	    	),
-	    	'show_in_menu'       => false,
+	    	'show_in_menu' => false,
 	  	));
 	}
 

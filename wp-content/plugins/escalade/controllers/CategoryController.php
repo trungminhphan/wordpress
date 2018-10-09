@@ -29,7 +29,7 @@ class CategoryController {
 	public function save_category_image($term_id, $tt_id ) {
 	   if( isset( $_POST['category-image-id'] ) && '' !== $_POST['category-image-id'] ){
 	     $image = $_POST['category-image-id'];
-	     add_term_meta( $term_id,'category-image-id', $image, true );
+	     add_term_meta($term_id,'category-image-id', $image, true );
 	   }
 	}
 
@@ -43,15 +43,15 @@ class CategoryController {
 	       <label for="category-image-id">'.__('Image').'</label>
 	     </th>
 	     <td>';
-	       $image_id = get_term_meta($term->term_id, 'category-image-id', true );
+	      $image_id = get_term_meta($term->term_id, 'category-image-id', true );
 	      echo '<input type="hidden" id="category-image-id" name="category-image-id" value="'.$image_id.'">
 	       <div id="category-image-wrapper">';
-	        if ( $image_id ) {
+	        if($image_id) {
 	           echo wp_get_attachment_image($image_id, 'thumbnail');
 	        }
 	       echo '</div>
 	       <p>
-	         <input type="button" class="button button-secondary ct_tax_media_button" id="ct_tax_media_button" name="ct_tax_media_button" value="'. __('Add Image').'" />
+	         <input type="button" class="button button-secondary ct_tax_media_button" id="ct_tax_media_button" name="ct_tax_media_button" value="'. __('Change Image').'" />
 	         <input type="button" class="button button-secondary ct_tax_media_remove" id="ct_tax_media_remove" name="ct_tax_media_remove" value="'. __( 'Remove Image').'" />
 	       </p>
 	     </td>
@@ -62,12 +62,12 @@ class CategoryController {
 	 * Update the form field value
 	 * @since 1.0.0
 	 */
-	 public function updated_category_image ( $term_id, $tt_id ) {
-	   if( isset( $_POST['category-image-id'] ) && '' !== $_POST['category-image-id'] ){
+	 public function updated_category_image($term_id, $tt_id ) {
+	   if(isset( $_POST['category-image-id'] ) && '' !== $_POST['category-image-id'] ){
 	     $image = $_POST['category-image-id'];
-	     update_term_meta ( $term_id, 'category-image-id', $image );
+	     update_term_meta($term_id, 'category-image-id', $image);
 	   } else {
-	     update_term_meta ( $term_id, 'category-image-id', '' );
+	     update_term_meta($term_id, 'category-image-id', '');
 	   }
 	}
 
@@ -79,8 +79,7 @@ class CategoryController {
    <script>
      jQuery(document).ready( function($) {
        function ct_media_upload(button_class) {
-         var _custom_media = true,
-         _orig_send_attachment = wp.media.editor.send.attachment;
+         var _custom_media = true, _orig_send_attachment = wp.media.editor.send.attachment;
          $('body').on('click', button_class, function(e) {
            var button_id = '#'+$(this).attr('id');
            var send_attachment_bkp = wp.media.editor.send.attachment;

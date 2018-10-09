@@ -34,7 +34,7 @@ class AccommodationController {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array('slug' => 'accommodation' ),
+			'rewrite'            => array('slug' => 'acc' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -53,6 +53,7 @@ class AccommodationController {
 	      'price' => __( 'Price', 'smashing' ),
 	      'tax' => __( 'Tax', 'smashing' ),
 	      'category' => __( 'Category', 'smashing' ),
+	      'quantity' => __( 'Quantity' ),
 	    );
 	  return $columns;
 	}
@@ -89,8 +90,15 @@ class AccommodationController {
 		    		$arr[] =  $cat->name;
 		    	}
 		    }
-
 		    if($arr) echo implode(", ", $arr);
+		}
+		if ('quantity' === $column ) {
+		    $quantity = get_post_meta($post_id, 'quantity', true );
+		    if ( ! $quantity ) {
+		      _e( 'n/a' );  
+		    } else {
+		      echo number_format( $quantity, 0, '.', ',' );
+		    }
 		}
 	}
 }

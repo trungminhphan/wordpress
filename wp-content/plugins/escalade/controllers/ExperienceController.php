@@ -35,7 +35,7 @@ class ExperienceController{
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array('slug' => 'experiences' ),
+			'rewrite'            => array('slug' => 'experience' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,

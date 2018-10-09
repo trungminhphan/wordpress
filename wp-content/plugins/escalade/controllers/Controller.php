@@ -19,6 +19,8 @@ class Controller {
 		add_action('admin_menu', array($this, 'change_link'));
 		//add_action('admin_enqueue_scripts', array($this, 'enqueue'));
 		add_shortcode("escalade_book_form", array($this,"escalade_book_form"));
+		add_shortcode("list_accommodation", array($this,"list_accommodation"));
+		
 	}
 
 	function admin_menu_page(){
@@ -125,6 +127,9 @@ class Controller {
 	function escalade_book_form(){
 		wp_enqueue_style('mypluginstyle', $this->plugin_url . 'assets/css/style.css' );
 		require_once("$this->plugin_path/views/book_form.php");
+	}
 
+	function list_accommodation(){
+		require_once("$this->plugin_path/views/list_accommodation.php");	
 	}
 }
