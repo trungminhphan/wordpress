@@ -1,4 +1,48 @@
-.booking-form h2 {
+
+@media screen and (max-width: 1920px) {
+	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4 {
+		padding:  0px !important;
+	}
+	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4 {
+	padding:  0px !important;
+}
+}
+@media screen and (max-width: 400px) {
+	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4 {
+		padding:  10px !important;
+	}	
+	#booking-form {
+		background-color: #438aff;
+	}
+}
+
+#booking-form .col-md-2,#booking-form .col-md-4 {
+	border: 0px;
+}
+#booking-form .col-md-2 .form-control, #booking-form .col-md-4 .form-control {
+	background: none !important;
+	color: #fff;
+	border-radius: 0px;
+	border: 1px solid #fff;
+	font-family: Sanfrancisco;
+	padding: 10px;
+	font-size: 14px;
+	height:  50px;
+}
+#booking-form .col-md-2 button {
+	background: none !important;
+	font-family: Sanfrancisco;
+	font-size: 14px;
+	border: 1px solid #fff;
+	height: 50px;
+}
+#booking-form .col-md-4 select option,.col-md-2,#booking-form .col-md-2 select option{
+	color: #000;
+}
+#booking-form .col-md-2 input::-webkit-input-placeholder  {
+	color: #fff;
+}
+/*.booking-form h2 {
 	font-size: 22px;
 	font-family: Sanfrancisco;
 	font-weight: 900;
@@ -57,3 +101,4 @@
 	padding-bottom: 2px;
 	border-radius: 0px;
 }
+*/
