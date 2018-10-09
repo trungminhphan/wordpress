@@ -1,21 +1,43 @@
 
 @media screen and (max-width: 1920px) {
-	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4 {
+	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4,#booking-form .col-md-12 {
 		padding:  0px !important;
 	}
 	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4 {
-	padding:  0px !important;
+		padding:  0px !important;
+	}
+	h2.title_booking_form {
+		font-size: 18px;
+		color:#fff;
+		font-family: Sanfrancisco;
+		margin:auto;max-width: 1200px;
+		padding-bottom: 10px;
+	}
+	#booking-form {
+		background:none;
+	}
 }
-}
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 414px) {
 	#booking-form .row, #booking-form .col-md-2,#booking-form .col-md-4 {
 		padding:  10px !important;
-	}	
-	#booking-form {
+	}
+	#booking-form, h2.title_booking_form {
 		background-color: #438aff;
+	}
+	h2.title_booking_form {
+		padding: 20px;
+	}
+	.elementor-menu-toggle {
+		margin-right: 10px;
+		z-index: 99999;
 	}
 }
 
+#booking-form {
+	overflow: hidden;
+	max-width: 1200px;
+	margin:auto;
+}
 #booking-form .col-md-2,#booking-form .col-md-4 {
 	border: 0px;
 }
@@ -27,14 +49,14 @@
 	font-family: Sanfrancisco;
 	padding: 10px;
 	font-size: 14px;
-	height:  50px;
+	height:  40px;
 }
 #booking-form .col-md-2 button {
 	background: none !important;
 	font-family: Sanfrancisco;
 	font-size: 14px;
 	border: 1px solid #fff;
-	height: 50px;
+	height: 40px;
 }
 #booking-form .col-md-4 select option,.col-md-2,#booking-form .col-md-2 select option{
 	color: #000;

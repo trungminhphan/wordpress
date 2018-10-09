@@ -12,18 +12,20 @@ $guest = isset($_GET['guest']) ? $_GET['guest'] : '';
 ?>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript">
     $(function () {
         $('.datepicker').datepicker();
     });
 </script>
 <form action="/check" method="GET">
+
 <div class="row form-group" id="booking-form">
+	<div class="col-md-12">
+		<h2 class="title_booking_form">SET UP YOUR HOLIDAYS</h2>
+	</div>
 	<div class="col-md-4">
 		<select name="id_location" id="id_location" class="form-control">
 			<option value="">Location</option>
