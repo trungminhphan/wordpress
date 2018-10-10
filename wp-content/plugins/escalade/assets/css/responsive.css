@@ -160,12 +160,12 @@
 	}
 	.choose-room .box .modify, .extra-services .box .modify, .choose-services .box .modify, .checkout .box .modify {
 		float: right;
-		color: #939598;
+		color: #939598 !important;
 		padding-left:  20px;
 		border-left:  1px solid #939598;
 	}
-	.choose-room .box .modify a{
-		color: #939598;
+	.choose-room .box .modify a, .choose-services .box .modify a{
+		color: #939598; font-size: 13px;
 	}
 	.choose-room .box_active, .extra-services .box_active, .choose-services .box_active, .checkout .box_active{
 		width: 100%;
@@ -188,9 +188,15 @@
 		width: 90%;
 		margin-left: 10%;
 	}
+	.choose-services hr,.choose-room hr{
+		display: block;
+	    height: 1px;
+	    border: 0;
+	    border-top: 1px solid #fff;
+	}
 	.choose-services .box:before{
 		position: absolute;
-		left: 8%;
+		left: 5%;
 		content:"+";
 		color:#fff;
 		cursor: pointer;
@@ -215,9 +221,31 @@
 	.choose-services .box_checkout:hover{
 		background-color: #fff
 	}
+	.checkout .box a {
+		color:#092241;
+		font-size: 13px;
+	}
 	.choose-services .box_checkout a, .checkout .box_checkout a, .checkout .box_checkout button{
 		line-height: 40px;
 		color:#092241;
+	}
+	.checkout .checkout_form .row {
+		padding: 5px 0px 5px 0px;
+	}
+	.checkout .checkout_form .awe-select{
+		width: 100% !important;
+		background:none !important;
+		padding:5px;
+	}
+	.checkout .checkout_form .field-text{
+		border: 1px solid #fff;
+		background:none !important;
+		border-radius: 0px;
+		width: 100% !important;
+		padding: 5px;
+	}
+	.checkout .checkout_form .awe-select option {
+		color: #000;
 	}
 	#process_payment{
 		border:none;
@@ -326,7 +354,7 @@
 		font-family: sanfrancisco;
 		font-weight: 100;
 		text-align: center;
-		line-height: 25px;
+		line-height: 40px;
 	}
 	.accomd-modations-slide_room .items .content .c-right .t3{
 		font-size: 20px;
@@ -334,7 +362,7 @@
 		font-family: sanfrancisco;
 		font-weight: 100;
 		text-align: center;
-		padding-bottom:  20px;
+		padding:  10px 0px 10px 0px;
 	}
 	.accomd-modations-slide_room .items .select-button{
 		width:  100%; clear: both; text-align: center;

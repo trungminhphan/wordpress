@@ -66,7 +66,7 @@ class ExperienceController{
 		  if ('price' === $column ) {
 		    $price = get_post_meta( $post_id, 'price', true );
 		    if ( ! $price ) {
-		      _e( 'n/a' );  
+		      _e( 'n/a' );
 		    } else {
 		      echo '$ ' . number_format( $price, 0, '.', ',' );
 		    }
@@ -75,7 +75,7 @@ class ExperienceController{
 		if ('tax' === $column ) {
 		    $tax = get_post_meta($post_id, 'tax', true );
 		    if ( ! $tax ) {
-		      _e( 'n/a' );  
+		      _e( 'n/a' );
 		    } else {
 		      echo '$ ' . number_format( $tax, 0, '.', ',' );
 		    }

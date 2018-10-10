@@ -3,12 +3,6 @@
 <script type="text/javascript" src="/wp-content/plugins/escalade/assets/js/owl.carousel.js?ver=4.9.8"></script>
 <script type="text/javascript">
  $(function () {
-    $('.owl-next').click(function() {
-        $(".owl-carousel").trigger('next.owl.carousel');
-    });
-    $('.owl-prev').click(function() {
-       $(".owl-carousel").trigger('prev.owl.carousel');
-    });
     $(".owl-carousel").owlCarousel({
         pagination: !1,
         autoPlay: 4e3,
@@ -18,7 +12,6 @@
         navigation: !0,
         navigationText: ['<', '>']
     });
-
     $('html, body').animate({scrollTop: $("#choose_room").offset().top }, 2000, 'linear');
 });
 </script>
@@ -42,10 +35,10 @@
                 $departure = isset($_GET['departure']) ? $_GET['departure'] : (isset($_SESSION['cart']['departure']) ? $_SESSION['cart']['departure'] : date("m/d/Y"));
                 $guest = isset($_GET['departure']) ? $_GET['guest'] : (isset($_SESSION['cart']['guest']) ? $_SESSION['cart']['guest'] : '');
                 $cart = array(
-                    'id_location' => $id_location,
+                    'id_location' => intval($id_location),
                     'arrival' => $arrival,
                     'departure' => $departure,
-                    'guest' => $guest
+                    'guest' => intval($guest)
                 );
                 $_SESSION['cart'] = $cart;
                 ?>

@@ -19,7 +19,8 @@ final class InitController
 			AccommodationCategoryController::class,
 			ExtraServiceController::class,
 			AccommodationController::class,
-			ExperienceController::class
+			ExperienceController::class,
+			BookingController::class
 		];
 	}
 

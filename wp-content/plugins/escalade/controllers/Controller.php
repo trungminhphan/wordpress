@@ -24,7 +24,8 @@ class Controller {
 		add_shortcode("extra_service_category", array($this,"extra_service_category"));
 		add_shortcode("choose_extra_service", array($this,"choose_extra_service"));
 		add_shortcode("ajax_choose_extra_service", array($this,"ajax_choose_extra_service"));
-
+		add_shortcode("checkout", array($this,"checkout"));
+		add_shortcode("checkout_confirm", array($this,"checkout_confirm"));
 	}
 
 	function admin_menu_page(){
@@ -142,7 +143,26 @@ class Controller {
 
 	function ajax_choose_extra_service(){
 		$cart = $_SESSION['cart'];
-		var_dump($cart);
+		$id = isset($_GET['id']) ? $_GET['id'] : '';
+		$quantity = isset($_GET['quantity']) ? $_GET['quantity'] : 1;
+		$arr = isset($cart['extra_services']) ? $cart['extra_services'] : array();
+		$post = get_post($id);
+		$price = get_post_meta($post->ID, 'price', true);
+		$tax = get_post_meta($post->ID, 'tax', true);
+		$arr[] = array(
+            'id' => intval($post->ID),
+            'title' => $post->post_title,
+            'quantity' => $quantity,
+            'price' => doubleval($price),
+            'tax' => doubleval($tax)
+        );
+        $cart['extra_services'] = $arr;
+        $_SESSION['cart'] = $cart;
+        //var_dump($cart);
+		echo '<div class="box item">
+            <span class="info">'.$post->post_title.' x'.$quantity.'</span>
+            <span class="modify"><a href="/extra-services/?id_accommodation='.$cart['accommodation']['id'].'">MODIFY</a></span>
+        </div>';
 	}
 
 	function choose_extra_service(){
@@ -152,6 +172,52 @@ class Controller {
 	function convert_date($date){
       $a = explode("/", $date);
       return date("Y-m-d", mktime(0,0,0,$a[0],$a[1],$a[2]));
+    }
+
+    function checkout(){
+    	require_once("$this->plugin_path/views/checkout.php");
+    }
+
+    function checkout_confirm(){
+    	global $wpdb;
+    	$cart = $_SESSION['cart'];
+    	$guest = array(
+            'title' => isset($_POST['guest_title']) ? $_POST['guest_title'] : '',
+            'first_name' => isset($_POST['guest_firstname']) ? $_POST['guest_firstname'] : '',
+            'last_name' => isset($_POST['guest_lastname']) ? $_POST['guest_lastname'] : '',
+            'id_number' => isset($_POST['guest_idnumber']) ? $_POST['guest_idnumber'] : '',
+            'email' => isset($_POST['guest_email']) ? $_POST['guest_email'] : '',
+        );
+        $addition = array(
+            'title' => isset($_POST['add_title']) ? $_POST['add_title'] : '',
+            'first_name' => isset($_POST['add_firstname']) ? $_POST['add_firstname'] : '',
+            'last_name' => isset($_POST['add_lastname']) ? $_POST['add_lastname'] : '',
+            'id_number' => isset($_POST['add_idnumber']) ? $_POST['add_idnumber'] : '',
+            'email' => isset($_POST['add_email']) ? $_POST['add_email'] : '',
+        );
+        $address = array(
+            'country' => isset($_POST['country']) ? $_POST['country'] : '',
+            'city' => isset($_POST['city']) ? $_POST['city'] : '',
+            'address' => isset($_POST['address']) ? $_POST['address'] : '',
+            'phonenumber' => isset($_POST['phonenumber']) ? $_POST['phonenumber'] : '',
+        );
+        $payment_type = isset($_POST['payment_type']) ? $_POST['payment_type'] : '';
+        $cart['info'] = array($guest, $addition, $address, 'payment' => $payment_type);
+        $data = serialize($cart);
+        $arrival = $this->convert_date($cart['arrival']);
+        $departure = $this->convert_date($cart['departure']);
+    	$wpdb->insert(
+			$wpdb->prefix.'booking',
+			array(
+				'contents' => $data,
+				'arrival' => $arrival,
+				'departure' => $departure,
+				'created_at' => date("Y-m-d"),
+				'updated_at' => date("Y-m-d")
+			),
+			array( '%s', '%s', '%s', '%s', '%s' )
+		);
+		//unset($_SESSION['cart']);
     }
 
 }

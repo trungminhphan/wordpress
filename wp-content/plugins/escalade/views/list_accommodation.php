@@ -44,7 +44,9 @@ $posts = get_posts($query_args_meta);
                             <?php
                             if($image_id) {
 					           echo wp_get_attachment_image($image_id, 'full');
-					        }
+					        } else {
+                                echo '<img src="/wp-content/plugins/escalade/assets/images/b1.png" alt="">';
+                            }
                             ?>
                         </div>
                         <div class="desc">

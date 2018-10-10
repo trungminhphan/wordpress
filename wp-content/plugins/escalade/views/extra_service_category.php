@@ -8,12 +8,13 @@ $tax = get_post_meta($post->ID, 'tax', true );
 //var_dump($post);
 
 $cart = $_SESSION['cart'];
-$cart['accommodation']['id'] = $post->ID;
+$cart['accommodation']['id'] = intval($post->ID);
 $cart['accommodation']['title'] = $post->post_title;
-$cart['accommodation']['image_id'] = $image_id;
-$cart['accommodation']['price'] = $price;
-$cart['accommodation']['tax'] = $tax;
+$cart['accommodation']['image_id'] = intval($image_id);
+$cart['accommodation']['price'] = doubleval($price);
+$cart['accommodation']['tax'] = doubleval($tax);
 $_SESSION['cart'] = $cart;
+unset($_SESSION['cart']['extra_services']);
 ?>
 <link rel='stylesheet' id='escalade-css'  href='/wp-content/plugins/escalade/assets/css/responsive.css?ver=4.9.8' type='text/css' media='all' />
 <script type="text/javascript">
