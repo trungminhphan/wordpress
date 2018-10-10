@@ -4,11 +4,11 @@ $location = get_terms( array(
     'hide_empty' => false,
 ));
 $arr_guest = array(1,2,3,4,5,6,7,8,9,10);
+$id_location = isset($_GET['id_location']) ? $_GET['id_location'] : (isset($_SESSION['cart']['id_location']) ? $_SESSION['cart']['id_location'] : '') ;
+$arrival = isset($_GET['arrival']) ? $_GET['arrival'] : (isset($_SESSION['cart']['arrival']) ? $_SESSION['cart']['arrival'] : '');
+$departure = isset($_GET['departure']) ? $_GET['departure'] : (isset($_SESSION['cart']['departure']) ? $_SESSION['cart']['departure'] : '');
+$guest = isset($_GET['guest']) ? $_GET['guest'] : (isset($_SESSION['cart']['guest']) ? $_SESSION['cart']['guest'] : '');
 
-$id_location = isset($_GET['id_location']) ? $_GET['id_location'] : '';
-$arrival = isset($_GET['arrival']) ? $_GET['arrival'] : '';
-$departure = isset($_GET['departure']) ? $_GET['departure'] : '';
-$guest = isset($_GET['guest']) ? $_GET['guest'] : '';
 ?>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,7 +20,7 @@ $guest = isset($_GET['guest']) ? $_GET['guest'] : '';
         $('.datepicker').datepicker();
     });
 </script>
-<form action="/check" method="GET">
+<form action="/check-avaibility" method="GET">
 
 <div class="row form-group" id="booking-form">
 	<div class="col-md-12">
@@ -57,7 +57,7 @@ $guest = isset($_GET['guest']) ? $_GET['guest'] : '';
 		</select>
 	</div>
 	<div class="col-md-2">
-		<button type="submit" name="checkAccommodation" id="checkAccommodation">Check Avaibility</button>
+		<button type="submit" name="checkAccommodation" id="checkAccommodation">CHECK VAIBILITY</button>
 	</div>
 </div>
 </form>

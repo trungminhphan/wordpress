@@ -8,7 +8,7 @@ class ExtraServiceController {
 		add_filter( 'manage_extra_service_posts_columns', array($this,'smashing_extra_service_columns' ));
 		add_action( 'manage_extra_service_posts_custom_column', array($this,'smashing_extra_service_column'), 10, 2);
 	}
-	
+
 	function register_post_type() {
 		$labels = array(
 			'name'               => __( 'Extra services'),
@@ -67,7 +67,7 @@ class ExtraServiceController {
 		  if ('price' === $column ) {
 		    $price = get_post_meta( $post_id, 'price', true );
 		    if ( ! $price ) {
-		      _e( 'n/a' );  
+		      _e( 'n/a' );
 		    } else {
 		      echo '$ ' . number_format( $price, 0, '.', ',' );
 		    }
@@ -76,7 +76,7 @@ class ExtraServiceController {
 		if ('tax' === $column ) {
 		    $tax = get_post_meta($post_id, 'tax', true );
 		    if ( ! $tax ) {
-		      _e( 'n/a' );  
+		      _e( 'n/a' );
 		    } else {
 		      echo '$ ' . number_format( $tax, 0, '.', ',' );
 		    }

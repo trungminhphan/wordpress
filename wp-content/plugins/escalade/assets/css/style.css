@@ -49,6 +49,7 @@
 	padding: 10px;
 	font-size: 14px;
 	height:  40px;
+  text-transform: uppercase;
 }
 #booking-form .col-md-2 button {
 	background: none !important;
@@ -58,7 +59,7 @@
 	height: 40px;
 }
 #booking-form .col-md-4 select option,.col-md-2,#booking-form .col-md-2 select option{
-	color: #000;
+	color: #000; text-transform: uppercase;
 }
 #booking-form .col-md-2 input::-webkit-input-placeholder  {
 	color: #fff;
@@ -1206,3 +1207,5 @@
   -ms-transform: translate(0,0);
   -o-transform: translate(0,0);
 }
+
+/*********************************RESPONSIVE***********************/

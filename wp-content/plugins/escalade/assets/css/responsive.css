@@ -1,0 +1,437 @@
+@media screen and (max-width:1920px){
+	.our-story {
+	  padding: 200px 0px 200px 0px;
+	}
+	.our-story .text h1.title-1{
+		font-size:  40px;
+		font-family:  sanfrancisco;
+		font-weight:  100;
+		color:  rgb(9, 34, 65);
+	}
+	.our-story .text h1.title-2{
+		font-size:  40px;
+		font-family:  sanfrancisco;
+		font-weight:  900;
+		color:  rgb(9, 34, 65);
+	}
+	.our-signature {
+		background:url('/assets/home/images/home/Homepage03-1.jpg');
+		padding:200px 0px 300px 0px;
+	}
+	.our-experience {
+		padding: 100px 0px 100px 0px;
+	}
+	.nearby-resort {
+		background:url(/assets/home/images/home/Homepage07-2.jpg);background-size:100%;
+		padding:280px 0px 300px 0px;
+		background-size: cover;
+	}
+	.contact-us {
+		padding: 200px 0px 200px 0px;
+	}
+	.reserve {
+		background:url(/assets/home/images/home/Homepage09-2-1400x709.jpg);
+		padding:250px 0px 250px 0px;
+		background-size: cover;
+	}
+	.choose-room {
+		background:  url(/wp-content/plugins/escalade/assets/images/book-2.jpg);
+		clear: both;
+	}
+	.choose-services {
+		background:  url(/wp-content/plugins/escalade/assets/images/book-3.jpg);
+	}
+	.list-choose, .slide_services{
+		background-color: #d9b568;
+		padding-bottom:10px;
+	}
+	.chef-phuc {
+
+	}
+	.check-info {
+		background-color: #d9b568;
+		padding-top:  50px;
+		padding-bottom: 20px;
+	}
+	.checkout .bootstrap-select.btn-group.awe-select .dropdown-toggle {
+		border: 1px solid #fff !important;
+		color: #fff !important;
+	}
+	.checkout .checkout_form .awe-select .dropdown-toggle , .checkout .checkout_form select {
+		border: 1px solid #fff;
+		color: #fff;
+	}
+	.checkout .checkout_form input{
+		border: 1px solid #fff;
+		color: #fff;
+	}
+	.list-choose .box {
+		padding: 30px;
+	}
+	.list-choose .box .item {
+		border: 1px solid #fff;
+		margin-top: 20px;
+	}
+	.list-choose .box .item:hover {
+		background-color: #fff;
+	}
+	.list-choose .box .item:hover a {
+		color: #d9b568;
+	}
+	.list-choose .box .item a {
+		clear: both;
+		line-height: 100px;
+		font-size: 25px;
+		color:#fff;
+	}
+	.choose-room .title-1{
+		font-size:  70px; color: #fff;
+		font-weight:  400;
+		font-family: sanfrancisco;
+		padding: 0px;
+		margin-top: 150px;
+	}
+	.extra-services .title-1, .checkout .title-1 {
+	 	font-size:  50px; color: #092241;
+		font-weight:  400;
+		font-family: sanfrancisco;
+		padding: 0px;
+		margin-top: 50px;
+	}
+	.choose-services .title-1 {
+		font-size:  50px; color: #fff;
+		font-weight:  400;
+		font-family: sanfrancisco;
+		padding: 0px;
+		margin-top: 50px;
+	}
+	.choose-room .title-2{
+		font-size:  55px; color: #fff;
+		font-weight:  100;
+		font-family: sanfrancisco;
+		padding: 0px; margin-top: -40px;
+	}
+	.extra-services .title-2, .checkout .title-2{
+		font-size:  50px; color: #092241;
+		font-weight:  100;
+		font-family: sanfrancisco;
+		padding: 0px; margin-top: -30px;
+	}
+	.choose-services .title-2{
+		font-size:  50px; color: #fff;
+		font-weight:  100;
+		font-family: sanfrancisco;
+		padding: 0px; margin-top: -30px;
+	}
+	.choose-room .box, .extra-services .box, .choose-services .box {
+		width: 100%;
+		background-color: #fff;
+		border:  1px solid #000;
+		line-height: 20px;
+		padding:  10px;
+		margin-top:  10px;
+	}
+	.extra-services .box {
+		background-color: #d9b568;
+		text-align: center;
+		border: none !important;
+	}
+	.checkout .box {
+		width: 90%;
+		background-color: #fff;
+		border:  1px solid #000;
+		line-height: 20px;
+		padding:  10px;
+		margin-top:  10px;
+		margin-left: 10%;
+	}
+	.checkout .box-title {
+		background: #fff;
+		color: #d9b568;
+		text-align: center;
+		font-size:  20px;
+		padding:  10px;
+	}
+	.extra-services .box a {
+		color: #092241;
+	}
+	.choose-room .box .info{
+		text-transform: uppercase;
+	}
+	.choose-room .box .modify, .extra-services .box .modify, .choose-services .box .modify, .checkout .box .modify {
+		float: right;
+		color: #939598;
+		padding-left:  20px;
+		border-left:  1px solid #939598;
+	}
+	.choose-room .box .modify a{
+		color: #939598;
+	}
+	.choose-room .box_active, .extra-services .box_active, .choose-services .box_active, .checkout .box_active{
+		width: 100%;
+		background-color: #092241;
+		border:  1px solid #092241;
+		line-height: 20px;
+		padding:  10px;
+		margin-top:  10px;
+		color: #fff;
+		font-size:  15px;
+		font-family: sanfrancisco;
+	}
+	.choose-room .box_active .modify, .extra-services .box_active .modify, .choose-services .box_active .modify{
+		float: right;font-size: 20px;
+	}
+	.checkout .box_active .modify {
+		float: right; font-size: 14px;
+	}
+	.choose-services .box.item {
+		width: 90%;
+		margin-left: 10%;
+	}
+	.choose-services .box:before{
+		position: absolute;
+		left: 8%;
+		content:"+";
+		color:#fff;
+		cursor: pointer;
+		font-size:  25px;
+		font-weight:  100;
+	}
+	.checkout .box:before {
+		position: absolute;
+		left: 8%;
+		content:"+";
+		color:#092241;
+		cursor: pointer;
+		font-size:  25px;
+		font-weight:  100;
+	}
+	.choose-services .box_checkout, .checkout .box_checkout {
+		border:  0px;
+		margin-top:  10px;
+		text-align:center;
+		background-color: #d9b568;
+	}
+	.choose-services .box_checkout:hover{
+		background-color: #fff
+	}
+	.choose-services .box_checkout a, .checkout .box_checkout a, .checkout .box_checkout button{
+		line-height: 40px;
+		color:#092241;
+	}
+	#process_payment{
+		border:none;
+		background: none;
+		padding: 5px 5px;
+	}
+	.choose-services .select_date, .choose-services .quality {
+		max-width: 150px; display: inline;
+		border: 1px solid #fff;
+		background-color: #d9b568;
+		color:#fff;
+	}
+	.choose-services .select_date::-webkit-input-placeholder{
+		color:#fff;
+	}
+	.choose-services .select_date:-ms-input-placeholder{
+ 		color:#fff;
+	}
+	.choose-services .select_date::-moz-placeholder{
+		color:#fff;
+	}
+	.choose-services .select_date:-moz-placeholder {
+		color:#fff;
+	}
+	.choose-services .quality::-webkit-input-placeholder{
+		color:#fff;
+	}
+	.choose-services .quality:-ms-input-placeholder{
+ 		color:#fff;
+	}
+	.choose-services .quality::-moz-placeholder{
+		color:#fff;
+	}
+	.choose-services .quality:-moz-placeholder {
+		color:#fff;
+	}
+	.checkout .checkout_form input::-webkit-input-placeholder{
+		color:#fff;
+	}
+	.checkout .checkout_form input:-ms-input-placeholder{
+ 		color:#fff;
+	}
+	.checkout .checkout_form input::-moz-placeholder{
+		color:#fff;
+	}
+	.checkout .checkout_form input:-moz-placeholder {
+		color:#fff;
+	}
+	.checkout .checkout_form .bootstrap-select.btn-group.awe-select .dropdown-toggle::-webkit-select-placeholder{
+		color:#fff !important;
+	}
+	.checkout .checkout_form .bootstrap-select.btn-group.awe-select .dropdown-toggle:-ms-select-placeholder{
+ 		color:#fff !important;
+	}
+	.checkout .checkout_form .bootstrap-select.btn-group.awe-select .dropdown-toggle::-moz-placeholder{
+		color:#fff !important;
+	}
+	.checkout .checkout_form .bootstrap-select.btn-group.awe-select .dropdown-toggle:-moz-placeholder {
+		color:#fff !important;
+	}
+
+	.choose-room .slide_room {
+		background-color: #d9b568;
+	}
+	.accomd-modations-slide_room .items {
+		padding:  20px;
+	}
+	.accomd-modations-slide_room .items .img-thumb {
+		width:  90%; padding-top:  20px;
+		margin: auto;
+	}
+	.accomd-modations-slide_room .items .content {
+		padding-top:  10px; width: 95%;
+	}
+	.accomd-modations-slide_room .items .content .c-left {
+		width: 60%; float:  left; padding:  10px 10px 10px 40px;
+	}
+	.accomd-modations-slide_room .items .content .c-left .title{
+		font-size:  30px;
+		font-weight:  400;
+		color: #fff;
+	}
+	.accomd-modations-slide_room .items .content .c-left  p{
+		font-size:  16px;
+		font-weight:  100;
+		color: #fff;
+	}
+	.accomd-modations-slide_room .items .content .c-right {
+		width: 40%; float: right;
+		border:  1px solid #fff;
+	}
+
+	.accomd-modations-slide_room .items .content .c-right .t1 {
+		min-width:  100%;
+		font-size:  100px;
+		clear: both;
+		text-align: center;
+		font-weight: 100;
+		color:  #fff;
+		line-height: 100px;
+		font-family: sanfrancisco;
+	}
+	.accomd-modations-slide_room .items .content .c-right .t2 {
+		font-size:  16px;
+		color:  #fff;
+		font-family: sanfrancisco;
+		font-weight: 100;
+		text-align: center;
+		line-height: 25px;
+	}
+	.accomd-modations-slide_room .items .content .c-right .t3{
+		font-size: 20px;
+		color:  #fff;
+		font-family: sanfrancisco;
+		font-weight: 100;
+		text-align: center;
+		padding-bottom:  20px;
+	}
+	.accomd-modations-slide_room .items .select-button{
+		width:  100%; clear: both; text-align: center;
+	}
+	.accomd-modations-slide_room .items .add-button {
+		width:  40%; clear: both; text-align: center;float:right;
+	}
+	.accomd-modations-slide_room .items .select-button .btn {
+		width:  100%;
+		background: #fff;
+		margin-top: 20px !important;
+		color: #d9b568;
+		font-size: 18px;
+	}
+	.accomd-modations-slide_room .items .add-button .btn{
+		width:  100%;
+		background: #fff;
+		margin-top: 10px !important;
+		color: #d9b568;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width:678px){
+	.our-story {
+	  padding: 20px 0px 20px 0px;
+	}
+	.section-slider {
+		height:  200px !important;
+		margin-top:  60px;
+	}
+	.our-signature {
+		padding:20px 0px 30px 0px;
+	}
+	.our-experience {
+		padding: 20px 0px 20px 0px;
+	}
+	.nearby-resort {
+		background:url(/assets/home/images/home/Homepage07-2.jpg);
+		padding:28px 0px 30px 0px;
+	}
+	.contact-us {
+		padding: 20px 0px 20px 0px;
+	}
+	.reserve {
+		background:url(/assets/home/images/home/Homepage09-2-1400x709.jpg);
+		padding:25px 0px 25px 0px;
+	}
+	.choose-room .box .info {
+		font-size: 12px;
+	}
+	.choose-room .title-1 {
+		margin-top: 20px;
+	}
+	.accomd-modations-slide_room .items .content {
+		clear: both;
+	}
+	.accomd-modations-slide_room .items .content .c-right, .accomd-modations-slide_room .items .content .c-left {
+		width: 100%;
+	}
+	.choose-room {
+		clear: both;
+	}
+	.chef-phuc,.chef-phuc-1,.chef-phuc-2,.reserve-chef-phuc {
+	  padding: 10px 0px 10px 0px;
+	}
+	.chef-phuc .text .heading, .chef-phuc .text p, .chef-phuc .text span.bold,
+	.chef-phuc-1 .text .heading, .chef-phuc-1 .text p,.chef-phuc-1 .text span.bold,
+	.chef-phuc-2 .text .heading, .chef-phuc-2 .text p,.chef-phuc-2 .text span.bold {
+		font-size: 40px !important;
+	}
+	.chef-phuc .text, .chef-phuc-2 .text {
+		padding-bottom: 30px;
+	}
+}
+
+/**************KDJBHLKHDLKJHQJKWHDL*************/
+.owl-prev {
+	padding: 10px 15px 10px 15px;
+    position: absolute;
+    top: 40%;
+    margin-left: -15px;
+    display: block!IMPORTANT;
+    border:0px solid black;
+    font-family: Sanfrancisco;
+    background: #fff;
+    cursor: pointer;
+}
+
+.owl-next {
+    padding: 10px 15px 10px 15px;
+    position: absolute;
+    top: 40%;
+    right: -15px;
+    display: block!IMPORTANT;
+    border:0px solid black;
+    font-family: Sanfrancisco;background: #fff;
+    cursor: pointer;
+}
+.owl-prev i, .owl-next i {transform : scale(1,6); color: #ccc;}

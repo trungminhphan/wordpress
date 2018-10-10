@@ -51,7 +51,7 @@ $posts = get_posts($query_args_meta);
                             <?php echo $post->post_content; ?>
                         </div>
                         <div class="bot">
-                            <span class="price">Price <span class="amout"><?php echo $price; ?></span></span>
+                            <span class="price">Price <span class="amout">$<?php echo $price; ?></span></span>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ class Controller {
 	public $plugin_path;
 	public $plugin_url;
 	public $plugin;
-	
+
 	public function __construct(){
 
 		$this->plugin_path = plugin_dir_path( dirname( __FILE__) );
@@ -17,10 +17,14 @@ class Controller {
 		add_action('admin_menu', array($this, 'admin_menu_page'));
 		add_action('admin_menu', array($this, 'admin_submenu_page'));
 		add_action('admin_menu', array($this, 'change_link'));
-		//add_action('admin_enqueue_scripts', array($this, 'enqueue'));
+		add_action('admin_enqueue_scripts', array($this, 'enqueue'));
 		add_shortcode("escalade_book_form", array($this,"escalade_book_form"));
 		add_shortcode("list_accommodation", array($this,"list_accommodation"));
-		
+		add_shortcode("check_avaibility", array($this,"check_avaibility"));
+		add_shortcode("extra_service_category", array($this,"extra_service_category"));
+		add_shortcode("choose_extra_service", array($this,"choose_extra_service"));
+		add_shortcode("ajax_choose_extra_service", array($this,"ajax_choose_extra_service"));
+
 	}
 
 	function admin_menu_page(){
@@ -116,20 +120,38 @@ class Controller {
 
 	function enqueue() {
 		// enqueue all our scripts
-		wp_enqueue_style('mypluginstyle','https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
-		wp_enqueue_style('mypluginstyle', $this->plugin_url . 'assets/js/style.css' );
-		wp_enqueue_script('mypluginscript', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' );
-		wp_enqueue_script('mypluginscript', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' );
-		wp_enqueue_script('mypluginscript', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' );
-		wp_enqueue_script('mypluginscript', $this->plugin_url . 'assets/js/script.js' );
+		wp_enqueue_script('escalade', $this->plugin_url.'assets/js/script.js' );
 	}
 
 	function escalade_book_form(){
-		wp_enqueue_style('mypluginstyle', $this->plugin_url . 'assets/css/style.css' );
+		wp_enqueue_style('escalade', $this->plugin_url.'assets/css/style.css' );
 		require_once("$this->plugin_path/views/book_form.php");
 	}
 
 	function list_accommodation(){
-		require_once("$this->plugin_path/views/list_accommodation.php");	
+		require_once("$this->plugin_path/views/list_accommodation.php");
 	}
+
+	function check_avaibility(){
+		require_once("$this->plugin_path/views/check_avaibility.php");
+	}
+
+	function extra_service_category(){
+		require_once("$this->plugin_path/views/extra_service_category.php");
+	}
+
+	function ajax_choose_extra_service(){
+		$cart = $_SESSION['cart'];
+		var_dump($cart);
+	}
+
+	function choose_extra_service(){
+		require_once("$this->plugin_path/views/choose_extra_service.php");
+	}
+
+	function convert_date($date){
+      $a = explode("/", $date);
+      return date("Y-m-d", mktime(0,0,0,$a[0],$a[1],$a[2]));
+    }
+
 }
