@@ -4,11 +4,11 @@
  */
 /*
 Plugin Name: Escalade Plugin
-Plugin URI: http://wp.com/plugin
+Plugin URI: http://escalade.com.vn/plugin
 Description: This plugin for booking resort online
 Version: 1.0.0
 Author: Phan Minh Trung
-Author URI: http://wp.com
+Author URI: http://escalade.com.vn
 License: GPLv2 or later
 Text Domain: escalade-plugin
 */

@@ -9,9 +9,14 @@
 		font-size: 18px;
 		color:#fff;
 		font-family: Sanfrancisco;
-		margin:auto;max-width: 1200px;
+		margin:auto;max-width: 1000px;
 		padding-bottom: 10px;
 	}
+  #booking-form {
+    overflow: hidden;
+    max-width: 1040px;
+    margin:auto;
+  }
 	#booking-form {
 		background:none;
 	}
@@ -30,12 +35,6 @@
 		margin-right: 10px;
 		z-index: 99999;
 	}
-}
-
-#booking-form {
-	overflow: hidden;
-	max-width: 1200px;
-	margin:auto;
 }
 #booking-form .col-md-2,#booking-form .col-md-4 {
 	border: 0px;
@@ -57,6 +56,10 @@
 	font-size: 14px;
 	border: 1px solid #fff;
 	height: 40px;
+  padding: 5px 30px 5px 30px;
+}
+#booking-form .col-md-2 button:hover{
+  background: #fff !important; color: #000;
 }
 #booking-form .col-md-4 select option,.col-md-2,#booking-form .col-md-2 select option{
 	color: #000; text-transform: uppercase;

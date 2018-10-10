@@ -56,7 +56,7 @@ $guest = isset($_GET['guest']) ? $_GET['guest'] : (isset($_SESSION['cart']['gues
 			?>
 		</select>
 	</div>
-	<div class="col-md-2">
+	<div class="col-md-2" style="padding:0px;">
 		<button type="submit" name="checkAccommodation" id="checkAccommodation">CHECK VAIBILITY</button>
 	</div>
 </div>
