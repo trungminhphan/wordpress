@@ -15,82 +15,82 @@
 #nav-menu .elementor-item:hover {
     background-color: #fff;
     color:#092241;
-    
+
 }
 @media screen and (max-width: 400px) {
     #nav-menu {
         margin-top: -50px;
     }
-    
+
 }/* End custom CSS */
 /* Start Custom Fonts CSS */@font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: normal;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Regular.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Regular.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Regular.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Regular.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Regular.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Regular.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Regular.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Regular.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: 900;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Heavy.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Heavy.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Heavy.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Heavy.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Heavy.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Heavy.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Heavy.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Heavy.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Heavy.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: 300;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Light.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Light.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Light.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Light.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Light.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Light.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Light.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Light.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Light.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Light.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: 600;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Semibold.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Semibold.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Semibold.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Semibold.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Semibold.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Semibold.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Semibold.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Semibold.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Semibold.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: 100;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Thin.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Thin.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Thin.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Thin.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Thin.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Thin.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Thin.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Thin.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Thin.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Thin.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: 500;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Medium.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Medium.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Medium.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Medium.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Medium.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Medium.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Medium.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Medium.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Medium.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Sanfrancisco';
 	font-style: normal;
 	font-weight: bold;
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Bold.eot');
-	src: url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Bold.eot?#iefix') format('embedded-opentype'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Bold.woff2') format('woff2'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Bold.woff') format('woff'),
-		url('http://escalade.com.vn/wp-content/uploads/2018/10/SanFranciscoText-Bold-2.ttf') format('truetype');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Bold.eot');
+	src: url('/wp-content/uploads/2018/10/SanFranciscoText-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Bold.woff2') format('woff2'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Bold.woff') format('woff'),
+		url('/wp-content/uploads/2018/10/SanFranciscoText-Bold-2.ttf') format('truetype');
 }
 /* End Custom Fonts CSS */

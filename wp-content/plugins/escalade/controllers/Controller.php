@@ -180,44 +180,48 @@ class Controller {
 
     function checkout_confirm(){
     	global $wpdb;
-    	$cart = $_SESSION['cart'];
-    	$guest = array(
-            'title' => isset($_POST['guest_title']) ? $_POST['guest_title'] : '',
-            'first_name' => isset($_POST['guest_firstname']) ? $_POST['guest_firstname'] : '',
-            'last_name' => isset($_POST['guest_lastname']) ? $_POST['guest_lastname'] : '',
-            'id_number' => isset($_POST['guest_idnumber']) ? $_POST['guest_idnumber'] : '',
-            'email' => isset($_POST['guest_email']) ? $_POST['guest_email'] : '',
-        );
-        $addition = array(
-            'title' => isset($_POST['add_title']) ? $_POST['add_title'] : '',
-            'first_name' => isset($_POST['add_firstname']) ? $_POST['add_firstname'] : '',
-            'last_name' => isset($_POST['add_lastname']) ? $_POST['add_lastname'] : '',
-            'id_number' => isset($_POST['add_idnumber']) ? $_POST['add_idnumber'] : '',
-            'email' => isset($_POST['add_email']) ? $_POST['add_email'] : '',
-        );
-        $address = array(
-            'country' => isset($_POST['country']) ? $_POST['country'] : '',
-            'city' => isset($_POST['city']) ? $_POST['city'] : '',
-            'address' => isset($_POST['address']) ? $_POST['address'] : '',
-            'phonenumber' => isset($_POST['phonenumber']) ? $_POST['phonenumber'] : '',
-        );
-        $payment_type = isset($_POST['payment_type']) ? $_POST['payment_type'] : '';
-        $cart['info'] = array($guest, $addition, $address, 'payment' => $payment_type);
-        $data = serialize($cart);
-        $arrival = $this->convert_date($cart['arrival']);
-        $departure = $this->convert_date($cart['departure']);
-    	$wpdb->insert(
-			$wpdb->prefix.'booking',
-			array(
-				'contents' => $data,
-				'arrival' => $arrival,
-				'departure' => $departure,
-				'created_at' => date("Y-m-d"),
-				'updated_at' => date("Y-m-d")
-			),
-			array( '%s', '%s', '%s', '%s', '%s' )
-		);
-		//unset($_SESSION['cart']);
+    	$cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : '';
+        if($cart){
+        	$guest = array(
+                'title' => isset($_POST['guest_title']) ? $_POST['guest_title'] : '',
+                'first_name' => isset($_POST['guest_firstname']) ? $_POST['guest_firstname'] : '',
+                'last_name' => isset($_POST['guest_lastname']) ? $_POST['guest_lastname'] : '',
+                'id_number' => isset($_POST['guest_idnumber']) ? $_POST['guest_idnumber'] : '',
+                'email' => isset($_POST['guest_email']) ? $_POST['guest_email'] : '',
+            );
+            $addition = array(
+                'title' => isset($_POST['add_title']) ? $_POST['add_title'] : '',
+                'first_name' => isset($_POST['add_firstname']) ? $_POST['add_firstname'] : '',
+                'last_name' => isset($_POST['add_lastname']) ? $_POST['add_lastname'] : '',
+                'id_number' => isset($_POST['add_idnumber']) ? $_POST['add_idnumber'] : '',
+                'email' => isset($_POST['add_email']) ? $_POST['add_email'] : '',
+            );
+            $address = array(
+                'country' => isset($_POST['country']) ? $_POST['country'] : '',
+                'city' => isset($_POST['city']) ? $_POST['city'] : '',
+                'address' => isset($_POST['address']) ? $_POST['address'] : '',
+                'phonenumber' => isset($_POST['phonenumber']) ? $_POST['phonenumber'] : '',
+            );
+            $payment_type = isset($_POST['payment_type']) ? $_POST['payment_type'] : '';
+            $cart['info'] = array($guest, $addition, $address, 'payment' => $payment_type);
+            $data = serialize($cart);
+            $arrival = $this->convert_date($cart['arrival']);
+            $departure = $this->convert_date($cart['departure']);
+        	$wpdb->insert(
+    			$wpdb->prefix.'booking',
+    			array(
+                    'id_location' => intval($cart['id_location']),
+                    'id_accommodation' => intval($cart['accommodation']['id']),
+    				'contents' => $data,
+    				'arrival' => $arrival,
+    				'departure' => $departure,
+    				'created_at' => date("Y-m-d"),
+    				'updated_at' => date("Y-m-d")
+    			),
+    			array( '%s', '%s', '%s', '%s', '%s' )
+    		);
+    		unset($_SESSION['cart']);
+        }
     }
 
 }

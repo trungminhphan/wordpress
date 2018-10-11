@@ -1,7 +1,8 @@
 <?php
 namespace Controllers;
 
-class BookingController extends Controller {
+class BookingController {
+
     function register(){
         add_action('admin_menu', array($this, 'add_menu_booking'));
     }
@@ -11,6 +12,7 @@ class BookingController extends Controller {
     }
 
     function booking_list(){
-        require_once("$this->plugin_path/views/booking_list.php");
+        $path = plugin_dir_path( dirname( __FILE__) );
+        require_once($path . "/views/booking_list.php");
     }
 }

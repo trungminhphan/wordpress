@@ -4,7 +4,7 @@
  */
 /*
 Plugin Name: Escalade Plugin
-Plugin URI: http://escalade.com.vn/plugin
+Plugin URI: /plugin
 Description: This plugin for booking resort online
 Version: 1.0.0
 Author: Phan Minh Trung
