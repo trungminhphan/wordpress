@@ -30,16 +30,19 @@ $posts = get_posts($query_args_meta);
                 <?php if($posts): ?>
                 <?php foreach($posts as $post): ?>
                 <?php
-					//$meta = get_post_meta( $post->ID);
-					//var_dump($meta);
+					//$meta = get_post_meta($post->ID);
+                    $post_type_data = get_post_type_object( $post->post_type );
+                    $slug = $post_type_data->rewrite['slug'] . '/'. $post->post_name;
 					$image_id = get_post_meta($post->ID, 'images', true );
 					$price = get_post_meta($post->ID, 'price', true );
 					$tax = get_post_meta($post->ID, 'tax', true );
 					$quantity = get_post_meta($post->ID, 'quantity', true );
+                    $description = get_post_meta($post->ID, 'description', true );
 				?>
                 <div class="col-md-6">
                     <div class="room_item-1">
-                        <h2><a href="#"><?php echo $post->post_title; ?></a></h2>
+                        <h2><a href="/<?php echo $slug; ?>"><?php echo $post->post_title; ?></a></h2>
+                        <a href="/<?php echo $slug; ?>">
                         <div class="img">
                             <?php
                             if($image_id) {
@@ -49,8 +52,9 @@ $posts = get_posts($query_args_meta);
                             }
                             ?>
                         </div>
+                        </a>
                         <div class="desc">
-                            <?php echo $post->post_content; ?>
+                            <?php echo $description; ?>
                         </div>
                         <div class="bot">
                             <span class="price">Price <span class="amout">$<?php echo $price; ?></span></span>

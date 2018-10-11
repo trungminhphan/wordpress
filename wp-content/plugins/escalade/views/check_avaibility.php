@@ -12,7 +12,7 @@
         navigation: !0,
         navigationText: ['<', '>']
     });
-    $('html, body').animate({scrollTop: $("#choose_room").offset().top }, 2000, 'linear');
+    $('html, body').animate({scrollTop: $("#choose_room").offset().top }, 200, 'linear');
 });
 </script>
 <section class="choose-room" id="choose_room">

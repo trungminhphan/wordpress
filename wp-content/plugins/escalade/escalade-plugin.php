@@ -56,7 +56,6 @@ function deactivate_escalade_plugin() {
 }
 register_deactivation_hook( __FILE__, 'deactivate_escalade_plugin' );
 
-
 /**
  * Initialize all the core classes of the plugin
  */

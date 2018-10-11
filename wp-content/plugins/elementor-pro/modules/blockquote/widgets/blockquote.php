@@ -32,7 +32,7 @@ class Blockquote extends Widget_Base {
 	}
 
 	public function get_keywords() {
-		return [ 'blockquote', 'quote', 'paragraph', 'testimonial', 'text' ];
+		return [ 'blockquote', 'quote', 'paragraph', 'testimonial', 'text', 'twitter', 'tweet' ];
 	}
 
 	protected function _register_controls() {

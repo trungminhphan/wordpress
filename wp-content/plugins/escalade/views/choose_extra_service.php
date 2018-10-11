@@ -30,7 +30,7 @@ $extra_services = get_posts($query_args_meta);
         navigation: !0,
         navigationText: ['<', '>']
     });
-   $('html, body').animate({scrollTop: $("#choose_services").offset().top }, 2000, 'linear');
+   $('html, body').animate({scrollTop: $("#choose_services").offset().top }, 200, 'linear');
      $(".add_service").click(function(){
         var _this = $(this); var id = _this.attr("name");
         var quantity = $('.quality_'+id).val();

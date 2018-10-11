@@ -220,7 +220,26 @@ class Controller {
     			),
     			array( '%s', '%s', '%s', '%s', '%s' )
     		);
-    		unset($_SESSION['cart']);
+
+            //send email
+            $to = $guest['email'];
+            $subject = 'ESCALADE BOOKING';
+            $content = '';
+            $content .= '
+                <h2>YOU STAY</h2>
+                <p>'.$cart['accommodation']['title'].'</p>
+            ';
+            if(isset($cart['extra_services']) && $cart['extra_services']){
+                $content .= '<h2>YOU EXPERIENCES</h2>';
+                foreach($cart['extra_services'] as $ex){
+                    $content .= '<p>'.$ex['title'].' x'.$ex['quantity'].'</p>';
+                }
+            }
+            $content .= '<p>------------------------------------------</p>';
+            $content .= '<h5>Thanks for your booking</h5>';
+            $headers = array('Content-Type: text/html; charset=UTF-8','From: info@escalade.com.vn');
+            wp_mail($to, $subject, $content, $headers);
+            unset($_SESSION['cart']);
         }
     }
 

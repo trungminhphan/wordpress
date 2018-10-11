@@ -368,7 +368,7 @@ class Module extends Module_Base {
 	 * @return mixed
 	 */
 	public function fix_query_found_posts( $found_posts, $query ) {
-		$offset_to_fix = $query->get( 'fix_pagination_offset' );
+		$offset_to_fix = $query->get( 'offset_to_fix' );
 
 		if ( $offset_to_fix ) {
 			$found_posts -= $offset_to_fix;

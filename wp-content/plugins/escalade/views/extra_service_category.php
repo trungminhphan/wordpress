@@ -19,7 +19,7 @@ unset($_SESSION['cart']['extra_services']);
 <link rel='stylesheet' id='escalade-css'  href='/wp-content/plugins/escalade/assets/css/responsive.css?ver=4.9.8' type='text/css' media='all' />
 <script type="text/javascript">
  $(function () {
-    $('html, body').animate({scrollTop: $("#extra_service").offset().top }, 2000, 'linear');
+    $('html, body').animate({scrollTop: $("#extra_service").offset().top }, 200, 'linear');
 });
 </script>
 <section class="extra-services" id="extra_service">

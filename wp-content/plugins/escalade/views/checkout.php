@@ -31,7 +31,12 @@ if(isset($cart['extra_services']) && $cart['extra_services']){
                     <div class="title-2">OUT</div>
                     <div class="box_active">
                         <span class="info">YOU STAY</span>
-                        <span class="modify">TOTAL: <?php echo $cart['accommodation']['price']*$cart['accommodation']['tax']; ?> USD</span>
+                        <span class="modify">TOTAL:
+                            <?php
+                            if(isset($cart['accommodation']) && $cart['accommodation']){
+                                echo $cart['accommodation']['price']*$cart['accommodation']['tax'];
+                            }
+                            ?> USD</span>
                     </div>
                     <?php if($cart && $cart['accommodation']): ?>
                         <div class="box">
@@ -83,7 +88,7 @@ if(isset($cart['extra_services']) && $cart['extra_services']){
                                 <input type="text" class="field-text" name="guest_idnumber" required placeholder="ID NUMBER">
                             </div>
                             <div class="col-xs-8 col-sm-8">
-                                <input type="text" class="field-text" name="guest_email" required placeholder="EMAIL">
+                                <input type="email" class="field-text" name="guest_email" required placeholder="EMAIL">
                             </div>
                         </div>
                         <div class="row">
@@ -111,7 +116,7 @@ if(isset($cart['extra_services']) && $cart['extra_services']){
                                 <input type="text" class="field-text" name="add_idnumber" placeholder="ID NUMBER">
                             </div>
                             <div class="col-xs-8 col-sm-8">
-                                <input type="text" class="field-text" name="add_email" placeholder="EMAIL">
+                                <input type="email" class="field-text" name="add_email" placeholder="EMAIL">
                             </div>
                         </div>
                         <div class="row">

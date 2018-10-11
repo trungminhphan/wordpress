@@ -1,4 +1,4 @@
-/*! elementor-pro - v2.1.9 - 17-09-2018 */
+/*! elementor-pro - v2.1.10 - 09-10-2018 */
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 var ElementorProFrontend = function( $ ) {
 	var self = this;
@@ -1185,8 +1185,7 @@ var MenuHandler = elementorFrontend.Module.extend( {
 	},
 
 	toggleMenu: function( show ) {
-		var $dropdownMenu = this.elements.$dropdownMenu,
-			isDropdownVisible = this.elements.$menuToggle.hasClass( 'elementor-active' );
+		var isDropdownVisible = this.elements.$menuToggle.hasClass( 'elementor-active' );
 
 		if ( 'boolean' !== typeof show ) {
 			show = ! isDropdownVisible;
@@ -1194,18 +1193,8 @@ var MenuHandler = elementorFrontend.Module.extend( {
 
 		this.elements.$menuToggle.toggleClass( 'elementor-active', show );
 
-		if ( show ) {
-			$dropdownMenu.hide().slideDown( 250, function() {
-				$dropdownMenu.css( 'display', '' );
-			} );
-
-			if ( this.getElementSettings( 'full_width' ) ) {
-				this.stretchElement.stretch();
-			}
-		} else {
-			$dropdownMenu.show().slideUp( 250, function() {
-				$dropdownMenu.css( 'display', '' );
-			} );
+		if ( show && this.getElementSettings( 'full_width' ) ) {
+			this.stretchElement.stretch();
 		}
 	},
 
